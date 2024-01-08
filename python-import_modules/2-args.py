@@ -14,4 +14,3 @@ if __name__ == "__main__":
 
     for i in range(1, arg_count + 1):
         print(f"{i}: {argv[i]}")
-        
