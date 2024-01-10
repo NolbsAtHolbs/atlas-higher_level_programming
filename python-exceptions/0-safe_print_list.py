@@ -2,13 +2,12 @@
 
 def safe_print_list(my_list=[], x=0):
     count = 0
-    try:
-        iterator = iter(my_list)
-        while count < x:
-            print(next(iterator), end=" ")
+    for item in my_list[:x]:
+        try:
+            print(item, end=" ")
             count += 1
-    except StopIteration:
-        pass
-    finally:
-        print("")
-        return count
+        except Exception as e:
+            print("\nError:", e)
+            break
+    print("")
+    return count
