@@ -6,5 +6,5 @@ def safe_print_list(my_list=[], x=0):
             print("{:d}".format(my_list[i]), end="")
         except IndexError:
             break
-    print()
+    print("")
     return min(x, len(my_list))
