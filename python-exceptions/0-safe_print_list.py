@@ -3,10 +3,12 @@
 def safe_print_list(my_list=[], x=0):
     count = 0
     try:
-        for i in range(x):
-            print(my_list[i], end=" ")
+        iterator = iter(my_list)
+        while count < x:
+            print(next(iterator), end=" ")
             count += 1
-        print()
-    except IndexError:
+    except StopIteration:
         pass
-    return count
+    finally:
+        print("")
+        return count
