@@ -49,4 +49,4 @@ class Rectangle:
             return ("")
         else:
             return ("\n".join(["#" * self.__width
-                for y in range(self.__height)]))
+                    for y in range(self.__height)]))
