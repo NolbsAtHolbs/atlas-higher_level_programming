@@ -4,9 +4,9 @@
 
 
 def text_indentation(text):
-    
+
     """Function that prints text with 2 lines after ., ?, and :"""
-    
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
