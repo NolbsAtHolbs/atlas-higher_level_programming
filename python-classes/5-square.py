@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""This is module documentation for a defined area of Square class"""
+"""This is module documentation for a printed defined area of Square class"""
 
 
 class Square:
-    """This is class documentation for the area of a defined Square"""
+    """This is class documentation for the printed area of a defined Square"""
     def __init__(self, size=0):
         self.__size = size
 
