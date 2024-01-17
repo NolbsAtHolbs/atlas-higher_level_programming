@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """This is module documentation"""
-number_of_instances = 0
+
 
 class Rectangle:
     """This is class documentation for a rectangle"""
@@ -9,6 +9,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
     @property
     def width(self):
         return self.__width
