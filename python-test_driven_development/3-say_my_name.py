@@ -2,6 +2,7 @@
 
 """This is a module for a function that prints a name"""
 
+
 def say_my_name(first_name, last_name=""):
     """This is a function that prints a name"""
     if not isinstance(first_name, str):
