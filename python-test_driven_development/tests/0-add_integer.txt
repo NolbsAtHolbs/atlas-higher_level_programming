@@ -1,2 +1,5 @@
 >>> add_integer = __import__("0-add_integer").add_integer
 
+Adding 25 and 11
+	>>> add_integer(25, 2)
+	27
