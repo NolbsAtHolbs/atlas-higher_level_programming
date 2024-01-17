@@ -1,12 +1,7 @@
 #!/usr/bin/python3
 
-"""
-This is module documentation
-"""
+"""This is module documentation"""
 
 class Square:
-"""
-This is class documentation
-"""
-
+    """This is class documentation"""
     pass
