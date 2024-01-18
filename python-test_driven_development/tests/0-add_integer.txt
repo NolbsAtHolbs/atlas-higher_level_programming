@@ -21,4 +21,4 @@
 	>>> add_integer()
     Traceback (most recent call last):
 	...
-	TypeError: missing 1 positional argument
+	TypeError: add_integer() missing 1 required positional argument: 'a'
