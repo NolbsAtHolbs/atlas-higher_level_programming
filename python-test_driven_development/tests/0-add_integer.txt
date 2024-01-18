@@ -1,5 +1,19 @@
 >>> add_integer = __import__("0-add_integer").add_integer
 
-Adding 25 and 11
 	>>> add_integer(25, 2)
+	27
+
+	>>> add_integer(-25, -2)
+	-27
+
+	>>> add_integer(-25, 2)
+	-23
+
+	>>> add_integer(123456789, 987654321)
+	1111111110
+
+	>>> add_integer(25.52, 2.25)
+	28
+
+	>>> add_integer(25, 2.25)
 	27
