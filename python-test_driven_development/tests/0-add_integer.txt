@@ -17,3 +17,8 @@
 
 >>> add_integer(25)
 123
+
+>>> add_integer(25, "notaninteger")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
