@@ -1,19 +1,19 @@
 >>> add_integer = __import__("0-add_integer").add_integer
 
-	>>> add_integer(25, 2)
-	27
+>>> add_integer(25, 2)
+27
 
-	>>> add_integer(-25, -2)
-	-27
+>>> add_integer(-25, -2)
+-27
 
-	>>> add_integer(-25, 2)
-	-23
+>>> add_integer(-25, 2)
+-23
 
-	>>> add_integer(25.52, 2.25)
-	27
+>>> add_integer(25.52, 2.25)
+27
 
-	>>> add_integer(2, 2.25)
-	4
+>>> add_integer(2, 2.25)
+4
 
-    >>> add_integer(25)
-	123
+>>> add_integer(25)
+123
