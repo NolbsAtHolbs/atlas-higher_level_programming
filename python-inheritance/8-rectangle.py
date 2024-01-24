@@ -2,8 +2,8 @@
 
 """"Module for rectangle class that inherits from prev file"""
 
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 class Rectangle(BaseGeometry):
     """Class for inherited rectangle"""
