@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Module for class that defines student and checks attributes"""
+"""Module for class that defines student, checks attributes, checks keys"""
 
 
 class Student:
-    """class that defines student and checks attributes"""
+    """class that defines student and checks attributes and keys"""
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
