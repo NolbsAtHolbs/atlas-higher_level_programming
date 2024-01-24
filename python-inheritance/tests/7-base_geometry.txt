@@ -1,2 +1,8 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("numb", None)
+Traceback (most recent call last):
+...
+TypeError: numb must be an integer
