@@ -45,6 +45,4 @@ TypeError: age must be an integer
 
 >>> base_geometry = BaseGeometry()
 >>> base_geometry.integer_validator("age", 1)
-Traceback (most recent call last):
-...
-TypeError: age must be an integer
+1
