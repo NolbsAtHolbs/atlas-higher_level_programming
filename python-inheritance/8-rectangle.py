@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""""Module for class that raises a development exception & validates value and"""
+""""Module for rectangle class that inherits from prev file"""
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
