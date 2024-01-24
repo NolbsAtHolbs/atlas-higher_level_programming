@@ -15,4 +15,6 @@
 
 >>> my_list = MyList()
 >>> my_list.append('The')
-['The']
+>>> my_list.append('Thing')
+>>> my_list.print_sorted()
+['The', 'Thing']
