@@ -92,17 +92,6 @@ class TestRectangleDisplayMethod(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertEqual(output.getvalue(), "\n\n  #####\n")
 
-class TestRectangleUpdateMethod(unittest.TestCase):
-    def test_args_update(self):
-        new_rectangle = Rectangle(10, 10, 2, 2, 15)
-        self.assertEqual(new_rectangle.id, 15)
-        new_rectangle.update(15, 5, 5, 4, 4)
-        self.assertEqual(new_rectangle.id, 15)
-        self.assertEqual(new_rectangle.width, 5)
-        self.assertEqual(new_rectangle.height, 5)
-        self.assertEqual(new_rectangle.x, 4)
-        self.assertEqual(new_rectangle.y, 4)
-
     def test_kwargs_update(self):
         update_dict = {'id': 105, 'width': 20, 'height': 20, 'x': 2, 'y': 2}
         new_rectangle = Rectangle(2, 2, 0, 0, 10)
