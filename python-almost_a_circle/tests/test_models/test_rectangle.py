@@ -96,8 +96,8 @@ class TestRectangleUpdateMethod(unittest.TestCase):
     def test_args_update(self):
         new_rectangle = Rectangle(10, 10, 2, 2, 15)
         self.assertEqual(new_rectangle.id, 15)
-        new_rectangle.update(72, 5, 5, 4, 4)
-        self.assertEqual(new_rectangle.id, 72)
+        new_rectangle.update(30, 5, 5, 4, 4)
+        self.assertEqual(new_rectangle.id, 30)
         self.assertEqual(new_rectangle.width, 5)
         self.assertEqual(new_rectangle.height, 5)
         self.assertEqual(new_rectangle.x, 4)
