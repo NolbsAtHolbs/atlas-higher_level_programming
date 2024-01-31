@@ -12,3 +12,7 @@ import json
 from io import StringIO
 
 
+class TestRectangle(unittest.TestCase):
+    def stringwidth(self):
+        with self.assertRaises(TypeError):
+            bad_rect = Rectangle("two", 2)
