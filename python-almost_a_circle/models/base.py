@@ -40,3 +40,9 @@ class Base:
         if not json_string:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(**{"id": 0, "width": 0, "height": 0, "x": 0, "y": 0})
+        dummy.update(**dictionary)
+        return dummy
