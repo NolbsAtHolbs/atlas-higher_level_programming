@@ -13,7 +13,7 @@ from io import StringIO
 
 
 class TestSquareAttrs(unittest.TestCase):
-    def test_just_size(self):
+    def tsize(self):
         s1 = Square(5)
         res = s1.__str__()
         self.assertEqual(res, "[Square] (20) 0/0 - 5")

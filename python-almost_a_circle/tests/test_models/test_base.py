@@ -7,8 +7,6 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 import sys
-import os
-import json
 from io import StringIO
 
 
