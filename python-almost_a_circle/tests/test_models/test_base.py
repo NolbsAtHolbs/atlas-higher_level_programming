@@ -21,6 +21,7 @@ class TestBase(unittest.TestCase):
         id_obj = Base(89)
         self.assertEqual(id_obj.id, 89)
 
+class TestJSON(unittest.TestCase):
     def empty(self):
         self.assertEqual(Base.to_json_string(None), "[]")
 
@@ -36,6 +37,7 @@ class TestBase(unittest.TestCase):
         check = '[{"id": 2, "width": 5, "height": 7, "x": 0, "y": 0}]'
         self.assertEqual(Base.to_json_string([dict1]), check)
 
+class TestFromJSONMethod(unittest.TestCase):
     def empty1(self):
         empty1 = Base.from_json_string(None)
         self.assertEqual(empty1, [])
