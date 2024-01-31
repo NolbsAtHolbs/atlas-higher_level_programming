@@ -70,4 +70,4 @@ class Rectangle(Base):
         """Function that displays the rectangle"""
         for x in range(self.__width):
             for y in range(self.__height):
-                print("#", end="")
+                print("#", end="\n")
