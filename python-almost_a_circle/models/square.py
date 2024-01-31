@@ -39,5 +39,5 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """Public method that returns dictionary representation of rectangle"""
+        """Public method that returns dictionary representation of square"""
         return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
