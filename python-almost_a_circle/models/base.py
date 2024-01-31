@@ -43,6 +43,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dummy = cls(**{"id": 0, "width": 0, "height": 0, "x": 0, "y": 0})
+        """Class method that returns an instance with preset attributes"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
