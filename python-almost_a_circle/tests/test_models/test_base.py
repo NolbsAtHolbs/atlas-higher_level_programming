@@ -19,6 +19,35 @@ class TestBase(unittest.TestCase):
         test_obj = Base()
         self.assertEqual(test_obj.id, 1)
 
-    def test_custom_id(self):
+    def testid(self):
         id_obj = Base(89)
         self.assertEqual(id_obj.id, 89)
+
+    def empty(self):
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def notdict(self):
+        self.assertEqual(Base.to_json_string([3, 4, 5]), "[3, 4, 5]")
+
+    def notlist(self):
+        self.assertEqual(Base.to_json_string(50), "50")
+
+    def success(self):
+        r1 = Rectangle(5, 7)
+        dict1 = r1.to_dictionary()
+        check = '[{"id": 2, "width": 5, "height": 7, "x": 0, "y": 0}]'
+        self.assertEqual(Base.to_json_string([dict1]), check)
+
+    def empty1(self):
+        empty1 = Base.from_json_string(None)
+        self.assertEqual(empty1, [])
+
+    def empty2(self):
+        empty2 = Base.from_json_string("[]")
+        self.assertEqual(empty2, [])
+
+    def dict(self):
+        d = {'id': 50}
+        dl = [d]
+        jl = Base.to_json_string(dl)
+        self.assertEqual(Base.from_json_string(jl), [{'id': 50}])
