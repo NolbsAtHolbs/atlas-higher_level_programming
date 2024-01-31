@@ -15,10 +15,10 @@ import io
 class TestBase(unittest.TestCase):
     """Base class tests"""
     def baseid(self):
-        """test do it test done"""
-        b1 = Base()
-        b2 = Base()
-        b3 = Base(8)
-        self.assertEqual(b1.id, 1)
-        self.assertEqual(b2.id, 2)
-        self.assertEqual(b3.id, 8)
+        self.assertEqual(Base._Base__nb_objects, 0)
+        test_obj = Base()
+        self.assertEqual(test_obj.id, 1)
+
+    def test_custom_id(self):
+        id_obj = Base(89)
+        self.assertEqual(id_obj.id, 89)
