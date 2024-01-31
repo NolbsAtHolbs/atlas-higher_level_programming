@@ -67,9 +67,10 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Function that displays the rectangle"""
-        for i in range(self.height):
-            print("#" * self.width)
+        for y in range(self.y):
+            print("")
+        for h in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """Class update overriding the str method"""
