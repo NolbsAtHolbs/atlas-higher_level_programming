@@ -30,7 +30,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([3, 4, 5]), "[3, 4, 5]")
 
     def notlist(self):
-        self.assertEqual(Base.to_json_string(50), "50")
+        self.assertEqual(Base.to_json_string(51), "51")
 
     def success(self):
         r1 = Rectangle(5, 7)
