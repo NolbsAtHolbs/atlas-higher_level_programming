@@ -17,5 +17,5 @@ if __name__ == "__main__":
     session = Session()
     rows = session.query(State).order_by(State.id).all()
     for row in rows:
-        print(row.id, row.name)
+        print(f"{row.id}: {row.name}")
     session.close()
