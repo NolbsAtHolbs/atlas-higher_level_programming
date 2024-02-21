@@ -14,8 +14,7 @@ def cities_in_state():
                   ORDER BY cities.id ASC")
     dbcursor.execute(SQLcommand, (sys.argv[4],))
     rows = dbcursor.fetchall()
-    for row in rows:
-        print(row[0])
+    print(", ".join(rows[0]))
     dbcursor.close()
     dbconnect.close()
 
