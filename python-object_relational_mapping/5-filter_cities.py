@@ -13,8 +13,7 @@ def cities_in_state():
                   WHERE states.name = %s \
                   ORDER BY cities.id ASC")
     dbcursor.execute(SQLcommand, (sys.argv[4],))
-    rows = dbcursor.fetchall()
-    print(", ".join(rows[0]))
+    print(", ".join(rows[0] for rows in dbcursor.fetchall()))
     dbcursor.close()
     dbconnect.close()
 
