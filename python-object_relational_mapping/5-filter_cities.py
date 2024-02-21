@@ -15,7 +15,7 @@ def cities_in_state():
     dbcursor.execute(SQLcommand, (sys.argv[4],))
     rows = dbcursor.fetchall()
     for row in rows:
-        print(row)
+        print(row[0])
     dbcursor.close()
     dbconnect.close()
 
