@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""Script that displays all values in states table where name matches arg,
-and is safe from SQL injection"""
+"""Script that lists all cities from the database"""
 import MySQLdb
 import sys
 
 
-def match_states_safe():
+def cities():
     dbconnect = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                                 password=sys.argv[2], database=sys.argv[3])
     dbcursor = dbconnect.cursor()
@@ -21,4 +20,4 @@ def match_states_safe():
 
 
 if __name__ == "__main__":
-    match_states_safe()
+    cities()
