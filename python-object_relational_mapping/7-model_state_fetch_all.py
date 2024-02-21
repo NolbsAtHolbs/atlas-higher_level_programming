@@ -12,7 +12,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
     engine = create_engine(
-        f'mysql+mysqldb://{username}:{password}@localhost/database')
+        f'mysql+mysqldb://{username}:{password}@localhost/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
     rows = session.query(State).order_by(State.id).all()
