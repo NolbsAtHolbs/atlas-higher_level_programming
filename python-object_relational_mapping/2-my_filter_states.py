@@ -10,7 +10,7 @@ def match_states():
     dbcursor = dbconnect.cursor()
     dbcursor.execute(
         "SELECT * FROM states WHERE name LIKE BINARY '{}'"
-        "ORDER BY id ASC".format(sys.arv[4]))
+        "ORDER BY id ASC".format(sys.argv[4]))
     rows = dbcursor.fetchall()
     for row in rows:
         print(row)
