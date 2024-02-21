@@ -9,7 +9,7 @@ def match_states():
                                 password=sys.argv[2], database=sys.argv[3])
     dbcursor = dbconnect.cursor()
     dbcursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY '{}'"
+        "SELECT * FROM states WHERE name LIKE BINARY '{}' "
         "ORDER BY id ASC".format(sys.arv[4]))
     rows = dbcursor.fetchall()
     for row in rows:
