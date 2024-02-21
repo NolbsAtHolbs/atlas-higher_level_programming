@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Script that lists all State objects from the database"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
