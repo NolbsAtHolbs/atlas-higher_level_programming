@@ -10,7 +10,7 @@ def match_states_safe():
                                 password=sys.argv[2], database=sys.argv[3])
     dbcursor = dbconnect.cursor()
     SQLcommand = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    dbcursor.execute(SQLcommand, (sys.argv[4]))
+    dbcursor.execute(SQLcommand, (sys.argv[4],))
     rows = dbcursor.fetchall()
     for row in rows:
         print(row)
