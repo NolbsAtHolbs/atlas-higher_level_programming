@@ -15,7 +15,7 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhost/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    addstate = State(name = "Louisiana")
+    addstate = State(name="Louisiana")
     session.add(addstate)
     print(addstate.id)
     session.commit()
