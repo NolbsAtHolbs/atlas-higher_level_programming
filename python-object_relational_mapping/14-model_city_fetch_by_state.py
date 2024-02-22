@@ -16,7 +16,8 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhost/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    allcities = session.query(State, City).filter(State.id == City.state_id).order_by(City.id).all()
+    allcities = session.query(State, City).filter(
+        State.id == City.state_id).order_by(City.id).all()
     for city, state in allcities:
         print(f'{state.name}: ({city.id}) {city.name}')
     session.commit()
