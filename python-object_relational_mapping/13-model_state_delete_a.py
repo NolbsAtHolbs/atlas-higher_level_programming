@@ -15,6 +15,6 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhost/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    deletestate = session.query(State).filter(State.name.contains('a')).delete()
+    delstate = session.query(State).filter(State.name.contains('a')).delete()
     session.commit()
     session.close()
