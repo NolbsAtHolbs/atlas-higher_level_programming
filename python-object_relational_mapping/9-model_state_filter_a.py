@@ -18,3 +18,4 @@ if __name__ == "__main__":
     rows = session.query(State).filter(State.name.contains("a"))
     for row in rows:
         print(f"{row.id}: {row.name}")
+    session.close()

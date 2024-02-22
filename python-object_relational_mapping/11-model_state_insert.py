@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that prints State object with name passed as arg from database"""
+"""Script that adds the State object “Louisiana” to the database"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
@@ -15,9 +15,7 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhost/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    rows = session.query(State).filter(State.name == sys.argv[4]).first()
-    if rows is not None:
-        print(rows.id)
-    else:
-        print("Not found")
+    addstate = State(name = "Louisiana")
+    session.add(addstate)
+    session.commit()
     session.close()
