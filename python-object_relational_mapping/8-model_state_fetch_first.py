@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that lists all State objects from the database"""
+"""Script that prints the first State object from the database"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
@@ -15,7 +15,9 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhost/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    rows = session.query(State).order_by(State.id).all()
-    for row in rows:
+    row = session.query(State).first()
+    if row is not None:
         print(f"{row.id}: {row.name}")
+    else:
+        print("Nothing")
     session.close()
